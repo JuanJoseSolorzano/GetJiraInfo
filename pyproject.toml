@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "getjinfo"
+version = "1.1.1"
+authors = [
+    { name="Juan Jose Solorzano", email="juanjose.solorzano.c@gmail.com" }
+]
+description = "A tool to log time to JIRA issues directly from the terminal."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+]
+
+# Right side: package_folder.module_file:function_name
+[project.scripts]
+getjinfo = "getjinfo.getjinfo:run"  # Creates the global 'getjinfo' terminal command!
+
+# Tells hatchling explicitly to look for your renamed directory inside src/
+[tool.hatch.build.targets.wheel]
+packages = ["getjinfo"]

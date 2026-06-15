@@ -1,0 +1,1 @@
+from .getjinfo import run
